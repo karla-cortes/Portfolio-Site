@@ -158,8 +158,12 @@ form input {
 
 footer {
   background-color: #fada5e;
+  padding: 80px;
+  text-align: center;
+  width: 100%;
 }
 
 footer a {
   text-decoration: none;
+  text-align: center;
 }

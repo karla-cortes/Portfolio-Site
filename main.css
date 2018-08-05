@@ -31,8 +31,9 @@ p {
 .resumebtn {
   display: block;
   text-decoration: none;
-  color: #efcf48;
-  border: 2px solid #efcf48;
+  color: white;
+  text-transform: uppercase;
+  border: 2px solid white;
   border-radius: 66px;
   width: 175px;
   height: 53px;
@@ -61,4 +62,31 @@ p {
 nav {
   line-height: 150px;
   text-align: right;
+}
+
+nav a {
+  text-decoration: none;
+  color: #202427;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+nav a:first-child {
+  float: left;
+}
+
+/*----Header----*/
+
+header {
+  height: 1000px;
+  min-height: 1000px;
+  padding: 0 5%;
+  background-image: url('https://i.imgur.com/9JmcG9l.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+header h1 {
+  width: 50%;
+  margin: 2em 0 0;
 }

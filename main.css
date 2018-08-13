@@ -5,23 +5,30 @@
   outline: 0;
   font-size: 100%;
   vertical-align: baseline;
+  font-family: 'Input Mono', sans-serif;
+  color: black;
 }
 
 html,body {
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 
 body {
   width: 100%;
 }
 
-h1 {
+h1, nav a:first-child  {
   font-size: 48px;
   font-weight: 100;
+  text-shadow: 2px 2px #a8ff02;
+}
+
+h1 {
+  margin-top: 20px;
 }
 
 h3 {
@@ -31,39 +38,6 @@ h3 {
 p {
   font-size: 16px;
 }
-
-.resumebtn {
-  display: block;
-  text-decoration: none;
-  color: white;
-  text-transform: uppercase;
-  border: 2px solid white;
-  border-radius: 66px;
-  width: 175px;
-  height: 53px;
-  line-height: 53px;
-  text-align: center;
-  margin-top: 30px;
-}
-
-.resumebtn:hover {
-  color: #ebedee;
-}
-
-
-.submitbtn {
-  display: block;
-  text-decoration: none;
-  color: white;
-  background-color: black;
-  border-radius: 66px;
-  width: 175px;
-  height: 53px;
-  line-height: 53px;
-  text-align: center;
-  margin-top: 30px;
-}
-
 
 /*----Navigation----*/
 
@@ -78,30 +52,32 @@ nav a {
   text-decoration: none;
   font-size: 28px;
   font-weight: 700;
-  margin-right: 5px;
+  margin-right: 10px;
+}
+
+
+nav a:hover {
+  border-bottom: 1.5px solid #a8ff02;
 }
 
 nav a:first-child {
   float: left;
-}
-
-nav a:hover {
-  color: #ebedee;
+  border-bottom: none;
+  font-weight: bold;
 }
 
 /*----Header----*/
 
 header {
-  height: 1000px;
-  min-height: 1000px;
+  height: 800px;
+  min-height: 800px;
   margin: 0 auto;
   padding: 0 5%;
-  background-image: url(https://i.imgur.com/sWy3bcG.png);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-position: top right;
   width: 100%;
-  background-color: black;
+  background-color: white;
 }
 
 header h1 {
@@ -110,15 +86,78 @@ header h1 {
 }
 
 header h1, header h3, nav a{
-  color: white;
+  color: black;
 }
 
 header h3 {
   margin-top: 5px;
+}
 
+h4 {
+  font-weight: bold;
+}
+
+.profile-image {
+  float: right;
+  margin-right: 50px;
+  margin-left: 60px;
+}
+
+/*----Buttons----*/
+.resumebtn, .submitbtn, .githubbtn {
+  display: block;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  border: 1px solid black;
+  width: 175px;
+  height: 53px;
+  line-height: 53px;
+  text-align: center;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.resumebtn, .submitbtn {
+  background-color: white;
+}
+
+.resumebtn:hover, .submitbtn:hover {
+  box-shadow: 5px 5px #a8ff02;
 }
 
 
+.githubbtn {
+  background-color: black;
+  color: white;
+  margin-top: 10px;
+}
+
+.githubbtn:hover {
+  color: #a8ff02;
+}
+/*----About----*/
+
+.about-text {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 90%;
+}
+
+/*----Skills----*/
+
+.skills-list {
+  text-align: center;
+}
+
+.skills-list ul {
+  columns: 3;
+}
+
+li:hover {
+  font-weight: bold;
+}
 /*----Projects----*/
 
 .projects {
@@ -137,28 +176,27 @@ header h3 {
   justify-content: center;
 }
 
-
-.file {
-  margin: 0 30px;
-  color: #202427;
+.columns  {
+  width: 1260px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.file h3 {
+.column {
+  border: 1px solid black;
+  margin-right: 20px;
+  padding: 30px;
+  text-align:justify;
+  word-spacing:-2px;
+}
+/*----Contact----*/
+
+.contact {
   margin-bottom: 5px;
 }
 
-.contact {
-  margin-bottom: 30px;
-  padding-top: 300px;
-}
+/*----Form----*/
 
-.contact h1 {
-  text-align: center;
-}
-
-.contact input {
-  display: block;
-}
 
 form {
  margin: 0 auto;
@@ -167,17 +205,14 @@ form {
 
 form input {
   margin-bottom: 20px;
+  font-family: 'Input Mono', sans-serif;
 }
-
-
-
 
 /*----Footer----*/
 
 footer {
   text-align: center;
-  background-color: black;
-  padding: 50px;
+  padding: 10px;
   margin: 0 auto;
 }
 
@@ -185,6 +220,7 @@ footer h1{
     display:block;
     margin: 0 auto;
     text-align: center;
+    color: black;
     margin-bottom: 10px;
 }
 
@@ -197,8 +233,8 @@ footer img {
 .spinner{
     width: 80px;
     height: 80px;
-    border: 2px solid #f3f3f3;
-    border-top:3px solid white;
+    border: 2px solid #a8ff02;
+    border-top:3px solid #a8ff02;
     border-radius: 100%;
     position: absolute;
     top:0;
@@ -220,24 +256,45 @@ footer img {
 #overlay{
   height:100%;
   width:100%;
-  background:rgba(0, 0, 0, 1);
+  background-color: white;
   position:fixed;
   left:0;
   top:0;
  }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (min-width: 768px) and (max-width: 1313px) {
   header {
     height: 1000px;
     min-height: 1000px;
-    background-image: url(https://i.imgur.com/Nn6ny9X.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
   }
 
+  .profile-image {
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+
+  nav a:first-child {
+    font-size: 30px;
+  }
+
   header h1 {
     width: 100%;
+  }
+
+  .columns {
+    width: 90%;
+
+  }
+
+  .column {
+    display: inline-block;
   }
 
   .projects {
@@ -250,36 +307,50 @@ footer img {
 }
 
 
-@media only screen and (max-width: 600px) {
-  .first-name {
-    position: relative;
-    top: -100;
+@media only screen and (max-width: 766px) {
+  #first-name{
+    display: none;
   }
+
 
    header {
      overflow-y: hidden;
-     height: 700px;
-     min-height: 700px;
+     height: 555px;
+     min-height: 555px;
+     text-align: center;
      background-position: top right;
    }
 
    header h1 {
-     margin: 9em 0 0 0;
-     display: inline-block;
-     font-size: 30px;
+     font-size: 25px;
    }
+
+   h1 {
+     text-align: center;
+     font-size: 20px;
+
+   }
+
+  header h1, header h3 {
+    margin: 0 auto;
+     text-align: center;
+   }
+
+   .resumebtn, .submitbtn {
+     margin:0 auto;
+     margin-top: 5px;
+   }
+
 
    header h3 {
      font-size: 20px;
    }
 
-  .each-project .file{
-     flex-direction: column;
-   }
-
-   .file {
-     margin-top: 30px;
-   }
+  .column{
+    border: none;
+    justify-content: center;
+    margin-left:1%;
+  }
 
    .navbar-items {
      display: none;

@@ -1,71 +1,99 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Karla Cortes Portfolio</title>
     <meta chartset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
-  <link rel="stylesheet" href="main.css">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <link rel="stylesheet" href="main.css">
+  </head>
   <body>
     <div id="overlay">
-   <div class="spinner"></div>
-   </div>
+      <div class="spinner"></div>
+    </div>
     <header>
       <nav>
-        <a href="#" class="first-name">Karla Cortes</a>
-        <a href="#" class="navbar-items">About Me</a>
+        <a href="#" id="first-name">Karla Cortes</a>
+        <a href="#about" class="navbar-items">About</a>
         <a href="#projects" class="navbar-items">Projects</a>
-        <a href="#" class="navbar-items">Resume</a>
+        <a href="https://drive.google.com/file/d/1pB4txmzl_xyfaBKbswPW2bo5k1w9x3sl/view?usp=sharing" class="navbar-items" target="_blank">Resume</a>
         <a href="#contact" class="navbar-items">Contact</a>
       </nav>
-        <h1>Full-Stack Web Developer/Web Designer</h1>
-        <h3>24 year old from Boston currently in Miami.</h3>
-        <a href="#" class="resumebtn">Resume</a>
+      <div class="profile-image">
+        <img src="https://i.imgur.com/wlyxYyQ.png" alt="profile-pic" class="profile-pic" width="675">
+      </div>
+      <h1>Full-Stack Web Developer/Web Designer</h1>
+      <h3>24 year old from Boston currently in Miami.</h3>
+      <a href="https://drive.google.com/file/d/1pB4txmzl_xyfaBKbswPW2bo5k1w9x3sl/view?usp=sharing" class="resumebtn" target="_blank">Resume</a>
     </header>
-
-    <h1 class="title has-text-centered is-1" id="projects">Projects</h1>
+    <div class="body-text">
+      <h1 class="title has-text-centered is-1 has-text-black" id="about">About</h1>
+      <p class="about-text">My past life includes 4 years of experience in Human Services & Hospitality. Web Development fell into my lap around a year and a half ago and I have not stopped coding ever since. My passion is combining the attributes of Design with Technology and Problem Solving. My prior experience helps bridge the gap between great Customer Service and my own Individuality.  </p>
+      <div class="skills-list">
+        <h1 class="title has-text-centered is-1 has-text-black" id="about">Skills</h1>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Ruby</li>
+          <li>Ruby on Rails</li>
+          <li>Bootstrap</li>
+          <li>Adobe Photoshop</li>
+          <li>Sketch</li>
+        </ul>
+      </div>
+      <h1 class="title has-text-centered is-1 has-text-black" id="projects">Projects</h1>
       <div class="columns is-centered">
-         <div class="column is-12-mobile is-half-tablet is-one-third-desktop">
-            <img src="http://natibi.com/wp-content/uploads/2015/10/placeholder1-1550x1100.jpg" alt="placeholder" width="500">
-            <h3>Project #1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-
-            <div class="column is-12-mobile is-half-tablet is-one-third-desktop">
-              <img src="http://natibi.com/wp-content/uploads/2015/10/placeholder1-1550x1100.jpg" alt="placeholder" width="500">
-              <h3>Project #2</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-               </div>
-               <div class="column is-12-mobile is-half-tablet is-one-third-desktop">
-              <img src="http://natibi.com/wp-content/uploads/2015/10/placeholder1-1550x1100.jpg" alt="placeholder" width="500">
-              <h3>Project #3</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-           </div>
+        <div class="column is-one-quarter-mobile">
+          <img src="https://i.imgur.com/omfRi9X.jpg" alt="placeholder" width="500">
+          <h3>SongSearch</h3>
+          <p>A small React.js app that connects to the iTunes API. Search a song and it will render out recommendations based on the artist. It also includes a 30 second clip of the song and links to the artists' iTunes Album and Artist page.</p>
+          <h4>Technologies Used:</h4>
+          <p>React, Express.js, HTML5, CSS3, iTunes API</p>
+          <a href="https://song-search.herokuapp.com/" class="githubbtn" target="_blank">View</a>
+          <a href="https://github.com/karla-cortes/iTunes-Music-Search" class="githubbtn" target="_blank">Github</a>
+        </div>
+        <div class="column is-one-quarter-mobile">
+          <img src="https://i.imgur.com/omfRi9X.jpg" alt="placeholder" width="500">
+          <h3>Project #2</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <a href="https://song-search.herokuapp.com/" class="githubbtn" target="_blank">View</a>
+          <a href="#" class="githubbtn">Github</a>
+        </div>
+        <div class="column is-one-quarter-mobile i">
+          <img src="https://i.imgur.com/omfRi9X.jpg" alt="placeholder" width="500">
+          <h3>Project #3</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <a href="https://song-search.herokuapp.com/" class="githubbtn" target="_blank">View</a>
+          <a href="#" class="githubbtn">Github</a>
+        </div>
       </div>
-
       <div class="contact">
-          <h1 class="title has-text-centered is-1" id="contact">Contact Me.</h1>
-          <form action="mailto:kmcortes7@gmail.com" class="" action="index.html"  method="post">
-            <input type="text" name="first" value="" placeholder="First">
-            <input type="text" name="last" value="" placeholder="Last">
-            <input type="email" name="email" value="" placeholder="E-mail">
-            <input type="text" name="message" value="" placeholder="Talk to me" class="text-box">
-            <input type="submit" value="Send" class="submitbtn">
-          </form>
+        <h1 class="title has-text-centered is-1 has-text-black" id="contact">Contact Me.</h1>
+        <form action="mailto:kmcortes7@gmail.com" class="" action="index.html"  method="post">
+          <input type="text" name="first" value="" placeholder="First">
+          <input type="text" name="last" value="" placeholder="Last">
+          <input type="email" name="email" value="" placeholder="E-mail">
+          <input type="text" name="message" value="" placeholder="Talk to me" class="text-box">
+          <input type="submit" value="Send" class="submitbtn">
+        </form>
       </div>
-      <footer>
-        <h1 class="title has-text-centered is-1 has-text-white">Social</h1>
-        <div class="social-media-logos">
+    </div>
+    <footer>
+      <h1 class="title has-text-centered is-1 has-text-black">Social</h1>
+      <div class="social-media-logos">
         <a href="https://www.linkedin.com/in/karla-cortes/"><img src="https://i.imgur.com/Lb3H0Py.png" width="64" alt="linkedin"></a>
         <a href="https://github.com/karla-cortes"><img src="https://i.imgur.com/hfrYbU0.png" width="64" alt="github"></a>
+        <a href="mailto:kmcortes7@gmail.com" ><img src="https://i.imgur.com/SUkNyLq.png" width="64" alt="github"></a>
       </div>
-      </footer>
+
+    </footer>
   </body>
   <script>
     let overlay = document.getElementById("overlay");
       document.addEventListener('DOMContentLoaded', setTimeout(     function(){
         overlay.style.display = 'none';
-        }, 4000));
+      }, 3000));
     </script>
 </html>

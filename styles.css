@@ -1,0 +1,605 @@
+#overlay{
+  height:100%;
+  width:100%;
+  background-color: white;
+  position:fixed;
+  left:0;
+  top:0;
+  z-index: 100000;
+ }
+
+ .loader {
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right: 0;
+  margin: auto;
+  width: 500px;
+  height: 500px;
+ }
+
+/* HEADERS */
+
+h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.text-section h2 {
+  text-align: center;
+}
+
+.text-section.bio{
+  padding-top: 50px;
+}
+
+h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 28px;
+    font-weight: 400;
+  }
+  
+  h3 {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 41px;
+    padding: 42px;
+  }
+  
+  h4 {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+  }
+  
+  p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    color: #6e6e6e;
+  }
+  
+  .first-section-text {
+    font-size: 17px;
+    padding: 32px;
+    line-height: 33px;
+    letter-spacing: 0.3px;
+    font-weight: 300;
+  }
+  
+  /* LOGO */
+  .logo {
+    font-family: 'Bebas Neue', cursive;
+    color: #000000;
+  }
+
+  .double {
+    color: #e4e464;
+    text-decoration: underline;
+  }
+  
+  /* TOGGLE */
+  .main-container {
+    z-index: 9999;
+    position: fixed;
+    top: 50px;
+    right: 25px;
+    cursor: pointer;
+  }
+  .main-container .line-one,
+  .main-container .line-two,
+  .main-container .line-three {
+    width: 21px;
+    height: 2px;
+    background-color: #000;
+    border-radius: 5px;
+  }
+  .main-container .line-one {
+    position: relative;
+    bottom: 4px;
+    transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .main-container .line-three {
+    position: relative;
+    top: 4px;
+    transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms  cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .main-container.active .line-one {
+    bottom: -2px;
+    transform: rotateZ(-45deg);
+    transition: bottom 400ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .main-container.active .line-two {
+    background-color: #FFF;
+  }
+  .main-container.active .line-three {
+    top: -2px;
+    transform: rotate(45deg);
+    transition: top 400ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  /* NAV */
+  .nav {
+    padding: 32px;
+  }
+  
+  .desktop-menu li {
+    font-size: 40px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+  }
+  
+
+  .desktop-menu.active li {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+    padding-bottom: 8px;
+  }
+  
+  ul {
+    font-family: 'Bebas Neue', cursive;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  ul li a {
+    color: #212121;
+  }
+  ul li a:hover {
+    color: #e4e464;
+  }
+  
+  .desktop-menu.active {
+    margin-top: 100px;
+    display: block;
+  }
+  
+  .desktop-menu {
+    display: none;
+    padding-left: 0px;
+  }
+  
+  /* MOBILE NAV BAR */
+  .desktop-menu.active {
+    padding-top: 100px;
+    min-height: 100vh;
+    height: 100%;
+    padding-bottom: 55px;
+    z-index: 940;
+    overflow-y: scroll;
+    max-height: none;
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .container.active {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background-color: white;
+  }
+
+  .logo-image.active {
+    display: none;
+  }
+  
+  .logo-section {
+    display: flex;
+  }
+  
+  /* HERO */
+  .hero-image {
+    width: 100%;
+    display: block;
+  }
+  
+  /* INFO SECTION */
+  .text-section-info {
+    padding: 32px;
+  }
+  
+  .text-section-info h4 {
+    padding-bottom: 8px;
+  }
+  
+  .text-section-info p {
+    font-size: 14px;
+    padding-bottom: 60px;
+  }
+  
+  /* PICTURE SECTION */
+  .overlay {
+    background: rgba(255, 255, 255, 0.75);
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.25s ease-out;
+  }
+  
+  .box:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+  }
+  
+  .hover-text {
+    color: #6e6e6e;
+    font-size: 16px;
+    padding: 82px;
+    line-height: 24px;
+  }
+  
+  .box {
+    margin: 0 auto;
+    border-radius: 4px;
+    height: 600px;
+    width: 400px;
+    background-image: url(https://via.placeholder.com/400x600);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .overlay {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+  
+  /* AWARDS */
+  .text-section-awards {
+    padding: 32px;
+  }
+  
+  .text-section-awards p {
+    font-weight: 300;
+    padding-bottom: 50px;
+    line-height: 29px;
+    letter-spacing: 0px;
+    font-size: 15px;
+  }
+  
+  .text-section-awards h4 {
+    font-size: 18px;
+    padding-bottom: 16px;
+  }
+  
+  .text-section-awards .year-awards {
+    padding-bottom: 32px;
+    font-size: 18px;
+  }
+  
+  /* CLIENTS */
+  .logo-container {
+    background-color: #ffffff;
+    padding: 32px;
+  }
+  
+  .swiper-container {
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .swiper-slide {
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    height: 200px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  
+  /* FORM */
+  form,
+  input {
+    font-family: "Roboto", sans-serif;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    font-weight: 300;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .fab, .fas {
+    color: black;
+    padding-right: 24px;
+  }
+
+
+  .fab:hover, .fas:hover {
+    color: #e4e464;
+  }
+
+  form {
+    padding: 64px 0px;
+  }
+  
+  input {
+    padding-bottom: 48px;
+  }
+  
+  .send {
+    display: block;
+    margin: 0 auto;
+    border: none;
+    background-color: #ffffff;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 16px;
+    text-align: center;
+    padding: 8px 48px;
+  }
+  
+  .send:hover {
+    /* background-color: #000000; */
+    animation: pulse 1.25s ease-out;
+    cursor: pointer;
+    padding: 8px 48px;
+  }
+  
+  @keyframes pulse {
+    50%, 100% {
+      background-color: #000000;
+      color: #ffffff;
+    }
+  }
+  /* FOOTER */
+  .footer-text {
+    text-align: center;
+  }
+  
+  .footer-nav {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  
+  .footer-nav a li {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    padding-right: 16px;
+    color: #6e6e6e;
+  }
+  
+  .footer-nav a li:hover {
+    color: #000000;
+  }
+  
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+  }
+  
+  .panel {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .panel.footer-text {
+    margin-bottom: 400px;
+  }
+  
+  .arrow-navigation {
+    display: flex;
+  }
+  .arrow-navigation .arrow-bottom-left {
+    margin-right: auto;
+    width: 18px;
+    height: 18px;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    transform: rotate(-45deg);
+    left: 32px;
+    margin-left: 15px;
+  }
+  .arrow-navigation .arrow-bottom-right {
+    width: 18px;
+    height: 18px;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    transform: rotate(45deg);
+    right: 32px;
+    margin-right: 15px;
+  }
+  
+  /* EMAIL PAGE */
+  .email-container {
+    padding: 32px;
+  }
+  
+  .emails-image {
+    max-width: 100%;
+  }
+  
+  .emails {
+    padding-bottom: 40px;
+  }
+
+  .nav .logo-image {
+    width: 150px;
+  }
+  
+  /*EMAIL SLIDE SHOW */
+  .email-container {
+    position: absolute;
+  }
+  .email-container .email-wrap .arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    width: 0;
+    height: 0;
+  }
+  
+  .email-container .email-wrap #arrow-left {
+    width: 18px;
+    height: 18px;
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    transform: rotate(-45deg);
+    left: 32px;
+    margin-left: 15px;
+  }
+  .email-container .email-wrap #arrow-right {
+    width: 18px;
+    height: 18px;
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    transform: rotate(45deg);
+    right: 32px;
+    margin-right: 15px;
+  }
+  
+  .email-container .email-wrap #slider .slide {
+    max-width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .email-container .email-wrap #slider .slide.slide-1 {
+    background-image: url(../images/example.jpg);
+  }
+  .email-container .email-wrap #slider .slide.slide-2 {
+    background-image: url(https://www.tablefortwoblog.com/wp-content/uploads/2018/05/IMG_3622-600x800.jpg);
+  }
+  .email-container .email-wrap #slider .slide.slide-3 {
+    background-image: url(https://grilledcheesesocial.com/wp-content/uploads/2019/10/spicy-vodka-rigatoni-grilled-cheese-social-7-600x800.jpg);
+  }
+  
+  /* BANNERS */
+  .banners-container {
+    padding: 32px;
+  }
+  
+  .banners-container .banners-collage img {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  /* MEDIA QUERIES */
+  @media screen and (max-width: 600px) {
+    .portfolio-picture {
+      width: 100%;
+      padding: 16px;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .main-container {
+      display: none;
+    }
+  
+    .logo {
+      flex-grow: 1;
+    }
+  
+    .desktop-menu.active {
+      display: flex;
+    }
+  
+    .nav {
+      height: 150px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: baseline;
+    }
+  
+    .desktop-menu {
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .portfolio-picture {
+      width: 100%;
+    }
+  
+    /* PAST WORK BOXES */
+    .past-work-boxes {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  
+    /* EMAILS PAGE */
+    .email-container {
+      width: 90%;
+      display: flex;
+    }
+  
+    .email-container .email-wrap {
+      width: 50%;
+    }
+  
+    .email-container .email-wrap .arrow-container {
+      width: 97%;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .email-container .email-wrap .arrow-container #arrow-right {
+      right: initial;
+    }
+  
+    .client-description {
+      width: 40%;
+      padding-left: 40px;
+    }
+  
+    /* WRAPPER */
+    .wrapper, .panel.main-text, .main-text {
+      max-width: 85%;
+      margin: auto;
+    }
+  
+    .banner-client-description {
+      display: flex;
+      flex-direction: row;
+      height: 200px;
+    }
+    .banner-client-description .client-bio {
+      width: 75%;
+    }
+    .banner-client-description .client-info {
+      width: 25%;
+    }
+  
+    .banners-container .banners-collage {
+      display: -webkit-flex;
+      /* Safari */
+      -webkit-flex-wrap: wrap;
+      /* Safari 6.1+ */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .banners-container .banners-collage img {
+      width: 32%;
+      margin-bottom: 2%;
+      /* (100-32*3)/2 */
+      position: relative;
+    }
+  }
+  
+  /*# sourceMappingURL=style.css.map */
+  
